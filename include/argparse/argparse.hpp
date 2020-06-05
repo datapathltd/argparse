@@ -193,9 +193,9 @@ template <class T> struct parse_number<T> {
 namespace {
 
 template <class T> constexpr auto generic_strtod = nullptr;
-template <> constexpr auto generic_strtod<float> = strtof;
-template <> constexpr auto generic_strtod<double> = strtod;
-template <> constexpr auto generic_strtod<long double> = strtold;
+template <> auto generic_strtod<float> = strtof;
+template <> auto generic_strtod<double> = strtod;
+template <> auto generic_strtod<long double> = strtold;
 
 }
 
